@@ -5,15 +5,9 @@
 struct tga_t {
 	unsigned int width;
 	unsigned int height;
-<<<<<<< HEAD
 	unsigned int numComps;
 
 	unsigned char *pixels;
-=======
-  unsigned int numComps;
-    
-  unsigned char *pixels;
->>>>>>> 14f0235... Fixed tabs in tga.c
 };
 
 typedef struct TGAHeader {
@@ -50,13 +44,8 @@ tga_t *tga_load(const void *bytes)
 		return 0;
 	
 	// read image data.
-<<<<<<< HEAD
 	tga_t *tga = malloc(sizeof(tga_t));
 	tga->width = (unsigned int)header->width;
-=======
-  tga_t *tga = malloc(sizeof(tga_t));
-  tga->width = (unsigned int)header->width;
->>>>>>> 14f0235... Fixed tabs in tga.c
 	tga->height = header->height;
 	tga->numComps = header->pixelDepth / 8;
 
@@ -101,47 +90,26 @@ tga_t *tga_load(const void *bytes)
 
 void tga_release(tga_t *tga)
 {
-<<<<<<< HEAD
 	free(tga->pixels);
 	free(tga);
-=======
-  free(tga->pixels);
-  free(tga);
->>>>>>> 14f0235... Fixed tabs in tga.c
 }
 
 unsigned int tga_getWidth(tga_t *tga)
 {
-<<<<<<< HEAD
 	return tga->width;
-=======
-  return tga->width;
->>>>>>> 14f0235... Fixed tabs in tga.c
 }
 
 unsigned int tga_getHeight(tga_t *tga)
 {
-<<<<<<< HEAD
 	return tga->height;
-=======
-  return tga->height;
->>>>>>> 14f0235... Fixed tabs in tga.c
 }
 
 unsigned int tga_getNumComps(tga_t *tga)
 {
-<<<<<<< HEAD
 	return tga->numComps;
-=======
-  return tga->numComps;
->>>>>>> 14f0235... Fixed tabs in tga.c
 }
 
 unsigned char *tga_getPixels(tga_t *tga)
 {
-<<<<<<< HEAD
 	return tga->pixels;
-=======
-  return tga->pixels;
->>>>>>> 14f0235... Fixed tabs in tga.c
 }
